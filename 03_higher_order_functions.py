@@ -16,6 +16,7 @@ def sum_two_values_and_value(first_value, second_value, f_sum):
 print(sum_two_values_and_value(5, 2, sum_one))
 print(sum_two_values_and_value(5, 2, sum_five))
 
+from functools import reduce
 
 ### Closures ###
 """
@@ -46,3 +47,31 @@ print(sum_ten_2(5)(2))
 
 
 ### Built-in Higher Order Functions ###
+
+numbers = [2, 5, 10, 21, 3, 30]
+
+def multiply_two(number):
+    return number * 2
+
+def filter_greater_than_ten(number):
+    if number > 10:
+        return True
+    else:
+        return False
+
+def sum_two_values(first_value, second_value):
+    print(first_value)
+    print(second_value)
+    return first_value + second_value
+
+# Map
+print(list(map(multiply_two, numbers)))
+print(list(map(lambda number: number * 2, numbers)))
+
+# Filter
+print(list(filter(filter_greater_than_ten, numbers)))
+print(list(filter(lambda number: number > 10, numbers)))
+
+# Reduce
+
+print(reduce(sum_two_values, numbers))
