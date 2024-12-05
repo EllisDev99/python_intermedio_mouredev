@@ -1,6 +1,9 @@
 ### Funciones de orden superior ###
 ### Higher Order Functions ###
 
+"""En pocas palabras una función de orden superior es aquella que puede hacer cosas con
+otras funciones"""
+
 def sum_one(value):
     return value + 1
 
