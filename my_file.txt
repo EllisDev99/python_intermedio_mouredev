@@ -1,0 +1,4 @@
+mi nombre es Brayan
+mi apellido Medina
+mi edad es 25
+estoy estudiando Python
