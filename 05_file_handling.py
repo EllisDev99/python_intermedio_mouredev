@@ -37,3 +37,20 @@ json_dict = json.load(open('my_file.json'))
 print(type(json_dict))
 print(json_dict)
 print(json_dict['languages'])
+
+
+# .csv file
+import csv
+
+csv_file = open('my_file.csv', 'w+')
+
+csv_writer = csv.writer(csv_file)
+csv_writer.writerow(['name', 'subname', 'age'])
+csv_writer.writerow(['Brayan', 'Medina', 25])
+csv_writer.writerow(['Noah', 'Medina', 2])
+
+csv_file.close()
+
+with open('my_file.csv') as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
