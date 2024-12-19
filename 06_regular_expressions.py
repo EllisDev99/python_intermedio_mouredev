@@ -3,7 +3,7 @@ import re
 
 # match
 
-my_string = 'Esta es la lección número 6: Lección llamada Expresiones regulares'
+my_string = 'Esta es la lección número 6: \nLección llamada Expresiones regulares'
 my_other_string = 'Esta no es la lección número 6: Manejo de ficheros'
 
 # re.match busca el patrón al principio de la cadena, en caso de no estar retorna None
@@ -32,3 +32,10 @@ print(my_string[start:end])
 # findall
 findall = re.findall('lección', my_string, re.I)
 print(findall)
+
+# split
+print(re.split(':',my_string))
+
+# sub
+print(re.sub('6', 'VI', my_string))
+print(re.sub('lección|Lección', 'clase', my_string))
