@@ -3,7 +3,7 @@ import re
 
 # match
 
-my_string = 'Esta es la lección número 6: sobre Expresiones regulares'
+my_string = 'Esta es la lección número 6: Lección llamada Expresiones regulares'
 my_other_string = 'Esta no es la lección número 6: Manejo de ficheros'
 
 # re.match busca el patrón al principio de la cadena, en caso de no estar retorna None
@@ -30,3 +30,5 @@ start, end = search.span()
 print(my_string[start:end])
 
 # findall
+findall = re.findall('lección', my_string, re.I)
+print(findall)
