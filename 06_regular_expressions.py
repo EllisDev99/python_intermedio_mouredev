@@ -23,5 +23,10 @@ if not(match == None):
 
 
 # search
-search = re.search('Esta es la lección', my_string, re.I)
+search = re.search('lección', my_string, re.I)
 print(search)
+
+start, end = search.span()
+print(my_string[start:end])
+
+# findall
