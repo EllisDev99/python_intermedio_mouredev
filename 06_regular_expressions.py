@@ -114,3 +114,39 @@ print(re.sub('6', 'VI', my_string))
 print(re.sub('lección|Lección', 'clase', my_string))
 
 footer()
+
+
+# Patterns
+title('Patrones')
+
+pattern = r'[lL]ección'
+print(re.findall(pattern, my_string))
+
+pattern = r'[lL]ección|Expresiones'
+print(re.findall(pattern, my_string))
+
+pattern = r'[0-9]'
+print(re.search(pattern, my_string))
+
+# r'[\d]' Toma en cuenta solo los digitos
+# r'[\D]' Toma en cuenta solo las letras
+
+pattern = r'[l].'
+print(re.findall(pattern, my_string))
+
+pattern = r'[l].*'
+print(re.findall(pattern, my_string))
+
+email_1 = 'emailtest@gmail.com'
+email_2 = 'emailtest2024@gmail.com'
+email_3 = 'emailtest2024@outlock.com'
+email_4 = 'emailtest2024@proton.me'
+
+pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+
+print(re.match(pattern, email_1))
+print(re.match(pattern, email_2))
+print(re.match(pattern, email_3))
+print(re.match(pattern, email_4))
+
+footer()
